@@ -1,0 +1,32 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.0'
+
+    defaultConfig {
+        applicationId "com.parse.starter"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.oguzdev:CircularFloatingActionMenu:1.0.2'
+    compile files('libs/android-support-v7-recyclerview.jar')
+    compile files('libs/Parse.jar')
+    compile files('libs/bolts-android.jar')
+    compile files('libs/picasso.jar')
+    compile files('libs/superrecyclerview-1.0.0-javadoc.jar')
+    compile 'com.google.android.gms:play-services:+'
+    compile 'com.android.support:appcompat-v7:23.2.0'
+    compile 'com.android.support:support-v4:23.2.0'
+}
